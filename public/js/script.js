@@ -1,10 +1,10 @@
 // Define a mapping of secret words to configurations
 const configMap = {
-    "apple": "SecretConfig1",
-    "banana": "SecretConfig2",
-    "cherry": "SecretConfig3",
-    "date": "SecretConfig4",
-    "watermelon": "SecretConfig5"
+    "1": "SecretConfig1",
+    "2": "SecretConfig2",
+    "3": "SecretConfig3",
+    "4": "SecretConfig4",
+    "5": "SecretConfig5"
 };
 
 // Convert the input to lowercase for case-insensitivity
