@@ -7,6 +7,12 @@ const configMap = {
     "watermelon": "SecretConfig5"
 };
 
+// Convert the input to lowercase for case-insensitivity
+function getSelectedConfig(secretWord) {
+    const lowercaseSecretWord = secretWord.toLowerCase();
+    return configMap[lowercaseSecretWord] || "DefaultConfig";
+}
+
 // Define encryption and decryption methods for each configuration
 const encryptionMethods = {
     "SecretConfig1": {
@@ -66,7 +72,7 @@ const encryptionMethods = {
 function encrypt() {
     const text = document.getElementById("inputText").value;
     const secretWord = document.getElementById("configInput").value;
-    const selectedConfig = configMap[secretWord] || "DefaultConfig";
+    const selectedConfig = getSelectedConfig(secretWord);
     let result = encryptionMethods[selectedConfig].encrypt(text);
 
     const resultElement = document.getElementById("result");
@@ -77,7 +83,7 @@ function encrypt() {
 function decrypt() {
     const text = document.getElementById("inputText").value;
     const secretWord = document.getElementById("configInput").value;
-    const selectedConfig = configMap[secretWord] || "DefaultConfig";
+    const selectedConfig = getSelectedConfig(secretWord);
     let result = encryptionMethods[selectedConfig].decrypt(text);
 
     const resultElement = document.getElementById("result");
