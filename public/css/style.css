@@ -78,10 +78,13 @@ input[type="text"]::placeholder {
     margin-top: 20px;
     font-weight: bold;
     color: white;
-    font-size: 2em; /* Increase the font size for the result on mobile devices */
+    border: none;
+    text-align: center;
+    font-size: 1.6em; /* Increase the font size for the result on mobile devices */
     padding: 10px;
     border-radius: 10px;
     max-width: 90%;
+    height: auto;
     margin: 0 auto;
 }
 
