@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Enigma</title>
+    <link rel="icon" href="./question_mark_PNG87.png" type="image/png">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Link to custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./public/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-4">Enigma ❓</h1>
+            <h2>Secrets can't be revealed. 🗝️</h2>
+        </div>
+        <div style="margin-bottom: 30px;"></div>
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <!-- Wrap input fields in a form element -->
+                <form onsubmit="return false">
+                    <input type="text" id="inputText" class="form-control" placeholder="Enter text to encrypt/decrypt">
+                    <input type="text" id="configInput" class="form-control" placeholder="Enter your secret configuration word">
+                    <button class="btn btn-primary btn-lg btn-block" onclick="encrypt();">Encrypt</button>
+                    <button class="btn btn-danger btn-lg btn-block" onclick="decrypt();">Decrypt</button>
+                </form>
+                <div id="result" class="alert alert-info mt-3" style="display:none;"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Link to Bootstrap JS and jQuery (required for Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./public/js/script.js"></script>
+</body>
+</html>

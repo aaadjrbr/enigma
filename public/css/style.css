@@ -1,0 +1,84 @@
+body {
+    background-image: url('../assets/images/the-matrix-digital-rain.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    font-family: 'Comfortaa', sans-serif;
+    text-align: center; /* Center align all content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Create a black overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    z-index: -1; /* Place it behind the content */
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+.jumbotron {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for the jumbotron */
+    max-width: 80%; /* Limit the jumbotron width */
+    margin: 0 auto; /* Center the jumbotron horizontally */
+}
+
+input, .btn {
+    background-color: #00720a;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 10px;
+    width: 100%; /* Make inputs and buttons full width */
+    border-radius: 10px; /* Rounded corners for inputs and buttons */
+}
+
+input[type="text"]::placeholder {
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
+
+#result {
+    background-color: rgba(0, 0, 0, 0.5);
+    margin-top: 20px;
+    font-weight: bold;
+    color: white;
+    font-size: 1.8em;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners for the result div */
+    max-width: 80%; /* Limit the result width */
+    margin: 0 auto; /* Center the result horizontally */
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+    .jumbotron, #result {
+        max-width: 90%; /* Adjust the max width for smaller screens */
+    }
+}
