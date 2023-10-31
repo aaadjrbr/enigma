@@ -12,6 +12,9 @@ body {
     justify-content: center;
     padding: 10px;
     margin: 0;
+    left: 50;
+    right: 50;
+    min-height: 100vh;
 }
 
 /* Create a black overlay */
@@ -28,24 +31,30 @@ body::before {
 
 h1 {
     font-family: 'Russo One', sans-serif;
-    font-size: 2.2em;
+    font-size: 3em; /* Increase the font size for h1 on mobile devices */
 }
 
 h2 {
-    font-size: 1.5em;
+    font-size: 2em; /* Increase the font size for h2 on mobile devices */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    height: auto;
 }
 
 .jumbotron {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 10px;
-    max-width: 80%;
+    max-width: 90%;
     margin: 0 auto;
 }
 
 input, .btn {
     background-color: #00720a;
-    font-size: 0.9em;
+    font-size: 1.6em; /* Increase the font size for input and buttons on mobile devices */
     font-weight: bold;
     color: white;
     border: none;
@@ -69,9 +78,14 @@ input[type="text"]::placeholder {
     margin-top: 20px;
     font-weight: bold;
     color: white;
-    font-size: 1.8em;
+    font-size: 2em; /* Increase the font size for the result on mobile devices */
     padding: 10px;
     border-radius: 10px;
-    max-width: auto;
+    max-width: 90%;
     margin: 0 auto;
+}
+
+/* Media query for smaller screens (e.g., phones) */
+@media (max-width: 768px) {
+    
 }

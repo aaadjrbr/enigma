@@ -17,10 +17,36 @@ function getSelectedConfig(secretWord) {
 const encryptionMethods = {
     "SecretConfig1": {
         encrypt: function (text) {
-            return text.split("").reverse().join("");
+            // Convert text to a series of numbers and letters based on character codes
+            return text.split("").map(char => {
+                const charCode = char.charCodeAt(0);
+                if (charCode >= 97 && charCode <= 122) {
+                    // Convert lowercase letters to a code (a=1, b=2, ..., z=26)
+                    return String.fromCharCode(charCode + 3);
+                } else if (charCode >= 65 && charCode <= 90) {
+                    // Convert uppercase letters to a code (A=27, B=28, ..., Z=52)
+                    return String.fromCharCode(charCode + 3);
+                } else {
+                    // Keep non-alphabet characters as they are
+                    return char;
+                }
+            }).join("");
         },
         decrypt: function (text) {
-            return text.split("").reverse().join("");
+            // Convert the series of numbers and letters back to text
+            return text.split("").map(char => {
+                const charCode = char.charCodeAt(0);
+                if (charCode >= 97 && charCode <= 122) {
+                    // Convert codes to lowercase letters
+                    return String.fromCharCode(charCode - 3);
+                } else if (charCode >= 65 && charCode <= 90) {
+                    // Convert codes to uppercase letters
+                    return String.fromCharCode(charCode - 3);
+                } else {
+                    // Keep non-alphabet characters as they are
+                    return char;
+                }
+            }).join("");
         }
     },
     "SecretConfig2": {
